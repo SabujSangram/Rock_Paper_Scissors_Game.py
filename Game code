@@ -1,0 +1,73 @@
+import random
+
+def winner(com,player):
+
+  if com==player:
+
+    return 0
+
+  elif com=='R':
+
+    if player=='P':
+
+      return 1
+
+    else:
+
+        return -1
+
+  elif com=='P':
+
+   if player=='S':
+
+     return 1
+
+   else:
+
+     return -1
+
+  elif com=='S':
+
+    if player=='R':
+
+      return 1
+
+    else:
+
+      return -1
+
+print("Computer turnt: Chouse Rock(R), Paper(P), Scissors(S)")
+
+randno=random.randint(1,3)
+
+if randno==1:
+
+  com='R'
+
+elif randno==2:
+
+  com='P'
+
+else:
+
+  com='S'
+
+player=input("Enter your turn: Rock(R), Paper(P), Siser(S): \n")
+
+r=winner(com,player)
+
+print("Your Choise is ", player)
+
+print("Computer Choice is ", com)
+
+if r==0:
+
+  print("Tie")
+
+elif r==1:
+
+  print("You win")
+
+elif r==-1:
+
+  print("You Louse")
